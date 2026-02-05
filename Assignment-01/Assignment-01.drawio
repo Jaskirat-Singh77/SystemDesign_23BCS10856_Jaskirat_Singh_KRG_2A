@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Online Examination System - Advanced HLD">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="student" value="Student" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin" value="Admin" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="frontend" value="Web / Mobile Frontend" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="220" y="250" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gateway" value="API Gateway\n(Auth, Routing, Rate Limit)" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="440" y="250" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="auth" value="Authentication Service" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="700" y="80" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="exam" value="Exam Management Service" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="700" y="170" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="submission" value="Submission & Evaluation Service" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="700" y="260" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="result" value="Result & Analytics Service" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="700" y="350" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="notify" value="Notification Service\n(Email/SMS)" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="700" y="440" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="userdb" value="User DB" style="shape=cylinder;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="980" y="80" width="140" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="examdb" value="Exam DB" style="shape=cylinder;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="980" y="200" width="140" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="resultdb" value="Result DB" style="shape=cylinder;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="980" y="340" width="140" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="student" target="frontend"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="admin" target="frontend"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="frontend" target="gateway"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell edge="1" parent="1" source="gateway" target="auth"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="gateway" target="exam"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="gateway" target="submission"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="gateway" target="result"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="gateway" target="notify"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell edge="1" parent="1" source="auth" target="userdb"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="exam" target="examdb"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="submission" target="examdb"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell edge="1" parent="1" source="result" target="resultdb"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
